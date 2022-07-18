@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Galerie from './galerie/galerie';
+import { BrowserRouter as Router, Switch, Route, Redirect, NavLink } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+
     <div class="homepage">
       <div class="containericons">
         <img src="./images/iconfacebook.png" /> 
@@ -18,9 +21,9 @@ root.render(
       </div>
       <div class="navigationbar">
           <ul>
-              <li><a href="default.asp">GALERIE</a></li>
-              <li><a href="news.asp">CONTACT</a></li>
-              <li><a href="contact.asp">TARIFS</a></li>
+              <li><a  href="/galerie">GALERIE</a></li>
+              <li><a href="#">CONTACT</a></li>
+              <li><a href="#">TARIFS</a></li>
           </ul>
       </div>
     </div>
