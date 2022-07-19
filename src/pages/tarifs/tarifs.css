@@ -1,0 +1,24 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    background: #1A1A1D;
+}
+
+.container {
+    width: 100%;
+}
+
+.content {
+    display: inline-block;
+    word-break: break-all;
+}
+
+.content h2 {
+    font-weight: 500;
+    font-size: 30px;
+    text-align: left;
+}
+
+

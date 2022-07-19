@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Route, Routes, Switch, Link, BrowserRouter } f
 import './App.css';
 import Home from './pages/home/home';
 import Gallerie from './pages/gallerie/gallerie';
+import Tarifs from './pages/tarifs/tarifs';
+import Contact from './pages/contact/contact';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,6 +16,8 @@ root.render(
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/gallerie" element={<Gallerie />} />
+      <Route path="/tarifs" element={<Tarifs />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   </BrowserRouter>
   </React.StrictMode>

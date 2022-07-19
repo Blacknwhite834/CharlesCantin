@@ -1,32 +1,41 @@
 import './gallerie.css';
 import React from 'react';
+import { useState, useEffect } from "react";
 
 function Gallerie() {
-  
-  let btn = document.querySelectorAll('.btn');
-  let content = document.querySelectorAll('.content');
 
-  for(let i = 0; i<btn.length; i++){
-    btn[i].addEventListener('click', function(){
-      for(let j = 0; j<btn.length; j++){
-        btn[j].classList.remove('active');
-      }
-      this.classList.add('active');
+  const images = [
+    { id: 1, src: './images/photo1.jpg', category: ['all', 'couple'] },
+    { id: 2 ,src: './images/photo2.jpg', category: ['all']},
+    { id: 3, src: './images/photo3.jpg', category: ['all', 'portrait']},
+    { id: 4, src: './images/photo4.jpg', category: ['all', 'bébé']},
+    { id: 5, src: './images/photo5.jpg', category: ['all', 'grossesse']},
+    { id: 6, src: './images/photo6.jpg', category: ['all', 'couple']},
+    { id: 7, src: './images/photo7.jpg', category: ['all', 'baptême']},
+    { id: 8, src: './images/photo8.jpg', category: ['all', 'famille']},
+    { id: 9, src: './images/photo9.jpg', category: ['all', 'portrait']},
+    { id: 10, src: './images/photo10.jpg', category: ['all', 'mariage']},
+    { id: 11, src: './images/photo11.jpg', category: ['all', 'mariage']},
+  ]
 
-      let dataFilter = this.getAttribute('data-filter');
+  const [filter, setFilter] = useState('all');
+  const [projects, setProjects] = useState([]);
 
-      for( let k = 0; k<content.length; k++){
-        content[k].classList.remove('active');
-        content[k].classList.add('hide');
+  useEffect(( ) => {
+    setProjects(images);
+    }, []);
 
-        if(content[k].getAttribute('data-item') == dataFilter ||
-        dataFilter == "all"){
-          content[k].classList.remove('hide');
-          content[k].classList.add('active');
-        }
-      }
-    })
-  }
+  useEffect(( ) => {
+    setProjects([]);
+
+    const filtered = images.map(p => ({
+      ...p,
+      filtered: p.category.includes(filter)
+    }));
+    setProjects(filtered);
+  }, [filter]);
+
+
 
   return (
     <>
@@ -36,7 +45,7 @@ function Gallerie() {
           <ul>
               <li><a href="/gallerie">GALLERIE</a></li>
               <li><a href="#">CONTACT</a></li>
-              <li><a href="#">TARIFS</a></li>
+              <li><a href="/tarifs">TARIFS</a></li>
           </ul>
           <div class="containericons">
               <img src="./images/iconfacebook.png" /> 
@@ -45,34 +54,27 @@ function Gallerie() {
     </div>
     
    </header>
-   
+   <h1 id="title1">GALLERIE</h1>
    
    <div class="container">
-   <div id="btnContainer">
-            <button class="btn active" data-filter="all" > show all</button>
-            <button class="btn" data-filter="mariage" > mariage</button>
-            <button class="btn" data-filter="grossesse" > grossesse</button>
-            <button class="btn" data-filter="bébé" > bébé</button>
-            <button class="btn" data-filter="famille"> famille</button>
-            <button class="btn" data-filter="baptême"> baptême</button>
-            <button class="btn" data-filter="couple"> couple</button>
-            <button class="btn" data-filter="portrait"> portrait</button>
-    </div>
+        <div class="btnContainer">
+            <button class="btn active" active={filter === 'all'} onClick={() => setFilter('all')}>show all</button>
+            <button class="btn" active={filter === 'mariage'} onClick={() => setFilter('mariage')} >mariage</button>
+            <button class="btn" active={filter === 'grossesse'} onClick={() => setFilter('grossesse')} >grossesse</button>
+            <button class="btn" active={filter === 'bébé'} onClick={() => setFilter('bébé')} >bébé</button>
+            <button class="btn" active={filter === 'famille'} onClick={() => setFilter('famille')}>famille</button>
+            <button class="btn" active={filter === 'baptême'} onClick={() => setFilter('baptême')}>baptême</button>
+            <button class="btn" active={filter === 'couple'} onClick={() => setFilter('couple')}>couple</button>
+            <button class="btn" active={filter === 'portrait'} onClick={() => setFilter('portrait')}>portrait</button>
+         </div>
 
    
-      <div class="product">
-        <div class="content" data-item="couple">
-          <img src="../../images/photo1.jpg"></img>
-        </div>
-      
-        <div class="content" data-item="mariage">
-          <img src="../../images/photo2.jpg"></img>
-        </div>
-
-        <div class="content" data-item="portrait">
-          <img src="../../images/photo3.jpg"></img>
-        </div>
-      </div>
+    
+          <div class="content" >
+              <div class="img">
+                    {projects.map(item => item.filtered === true ? <img src={item.src}>{images.src}</img> : "")}
+              </div>
+          </div>
 
     </div>
 
