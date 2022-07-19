@@ -1,32 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Galerie from './galerie/galerie';
-import { BrowserRouter as Router, Switch, Route, Redirect, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Switch, Link, BrowserRouter } from 'react-router-dom';
+import './App.css';
+import Home from './pages/home/home';
+import Gallerie from './pages/gallerie/gallerie';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-
-    <div class="homepage">
-      <div class="containericons">
-        <img src="./images/iconfacebook.png" /> 
-        <img src="./images/iconinstagram.png"/>
-      </div>
-      <div class="containertitle">
-          <h1 id="title">CHARLES CANTIN</h1>
-          <h2>photographe</h2>
-      </div>
-      <div class="navigationbar">
-          <ul>
-              <li><a  href="/galerie">GALERIE</a></li>
-              <li><a href="#">CONTACT</a></li>
-              <li><a href="#">TARIFS</a></li>
-          </ul>
-      </div>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/gallerie" element={<Gallerie />} />
+    </Routes>
+  </BrowserRouter>
   </React.StrictMode>
 );
 

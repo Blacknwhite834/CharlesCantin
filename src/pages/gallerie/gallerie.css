@@ -1,0 +1,96 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    background: #1A1A1D;
+}
+
+header {
+    display: flex;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+#logo {
+    border-radius: 100%;
+    height: 100%;
+    margin-left: 20px;
+}
+
+ul { 
+    list-style-type: none;
+   display: flex;
+   align-items: center;
+}
+  
+a {
+    text-decoration: none!important;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-family: 'Jost', sans-serif;
+    font-size: 2vmin;
+    margin: 30px;
+}
+
+.containericons {
+    width: auto;
+    align-items: center;
+}
+
+.product {
+    display:flex;
+    width: 100%;
+}
+
+.product img {
+    width: 28.64vw;
+    height: 28.64vw;
+}
+
+.btn {
+    background-color: transparent;
+    margin: 8px;
+    border: none;
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+    font-size: 2vmin;
+    color: #E32C52;
+    cursor: pointer;
+}
+
+#btnContainer {
+    align-self: center;
+    width: 100%;
+}
+
+.container {
+    display:flex;
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.product .content {
+    position: relative;
+    display: block;
+}
+
+
+
+.product .content.hide {
+    display: none;
+}
+
+#btnContainer button.active {
+    color: white;
+}
+
