@@ -3,6 +3,7 @@
 body, html {
   margin: 0;
   scroll-behavior: smooth;
+  font-family: 'Jost', sans-serif;
 }
 
 .homepage {
@@ -17,27 +18,28 @@ body, html {
 
 .containertitle {
   width: 100%;
-  line-height: 15px;
+  line-height: 70px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  
   position: absolute;
 }
 
-h1 {
+.containertitle h1 {
   text-align: center;
   font-size: 9vmin;
   font-family: 'Jost', sans-serif;
   color: white;
 }
 
-h2 {
+.containertitle h2 {
   text-align: center;
   font-size: 5vmin;
   font-family: 'Jost', sans-serif;
   font-weight: 300;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .navigationbar {

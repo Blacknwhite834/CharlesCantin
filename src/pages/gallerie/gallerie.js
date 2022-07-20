@@ -54,9 +54,10 @@ function Gallerie() {
     </div>
     
    </header>
+   
    <h1 id="title1">GALLERIE</h1>
    
-   <div class="container">
+   <div class="containergallerie">
         <div class="btnContainer">
             <button class="btn active" active={filter === 'all'} onClick={() => setFilter('all')}>show all</button>
             <button class="btn" active={filter === 'mariage'} onClick={() => setFilter('mariage')} >mariage</button>
@@ -70,7 +71,7 @@ function Gallerie() {
 
    
     
-          <div class="content" >
+          <div class="content-gallerie" >
               <div class="img">
                     {projects.map(item => item.filtered === true ? <img src={item.src}>{images.src}</img> : "")}
               </div>

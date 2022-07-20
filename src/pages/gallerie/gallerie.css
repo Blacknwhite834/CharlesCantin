@@ -12,6 +12,7 @@ header {
     height: 100px;
 }
 
+
 .navbar {
     display: flex;
     justify-content: flex-end;
@@ -66,10 +67,11 @@ a {
     text-align: start;
     display: block;
     width: auto;
+    margin: 10px;
 }
 
-.container {
-    display:flex;
+.containergallerie {
+    display: flex;
     width: 100%;
     justify-content: center;
     margin: 0;
@@ -90,16 +92,22 @@ a {
 }
 
 #title1 {
+
+    margin: 30px;
     text-decoration: underline;
     text-decoration-color: #DC1818;
+    text-align: center;
+    font-size: 9vmin;
+    font-family: 'Jost', sans-serif;
+    color: white;
 }
 
-.content .img {
+.content-gallerie .img {
     display: block;
     justify-content: center;
 }
 
-.content {
+.content-gallerie {
     position: relative;
     
 }

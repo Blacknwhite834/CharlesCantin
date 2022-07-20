@@ -6,19 +6,46 @@ html, body {
     background: #1A1A1D;
 }
 
-.container {
+.container-tarifs {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
     width: 100%;
 }
 
-.content {
-    display: inline-block;
+.content-tarifs {
+    width: 25%;
+    height: 25%;
     word-break: break-all;
+    margin: 50px;
+    line-height: 30px;
 }
 
-.content h2 {
+.content-tarifs h2 {
     font-weight: 500;
     font-size: 30px;
     text-align: left;
+    color: white;
+}
+
+.content-tarifs h3 {
+    color: #E32C52;
+    font-size: 20px;
+}
+
+.content-tarifs p {
+    color: white;
+    font-size: 20px;
+    line-height: normal;
+}
+
+
+.content-tarifs img {
+    padding: 0px;
+    border-radius: 10px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
 }
 
 
