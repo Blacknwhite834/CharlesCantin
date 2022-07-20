@@ -1,11 +1,14 @@
 import React from 'react'
 import './tarifs.css';
+import { Link } from 'react-router-dom';
 
 const Tarifs = () => {
   return (
     <> 
         <header>
-            <img src="../../images/logo.png" alt="logo" id='logo'/>
+        <Link to="/">
+    <img src="../../images/logo.png" alt="logo" id='logo' />
+    </Link>
         <div class="navbar">
           <ul>
               <li><a href="/gallerie">GALLERIE</a></li>

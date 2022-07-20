@@ -1,6 +1,7 @@
 import './gallerie.css';
 import React from 'react';
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Gallerie() {
 
@@ -16,6 +17,7 @@ function Gallerie() {
     { id: 9, src: './images/photo9.jpg', category: ['all', 'portrait']},
     { id: 10, src: './images/photo10.jpg', category: ['all', 'mariage']},
     { id: 11, src: './images/photo11.jpg', category: ['all', 'mariage']},
+    { id: 12, src: './images/photo12.jpg', category: ['all']},
   ]
 
   const [filter, setFilter] = useState('all');
@@ -38,13 +40,15 @@ function Gallerie() {
 
 
   return (
-    <>
+    <div class="main-gallerie">
    <header>
-    <img src="../../images/logo.png" alt="logo" id='logo'/>
+    <Link to="/">
+    <img src="../../images/logo.png" alt="logo" id='logo' />
+    </Link>
     <div class="navbar">
           <ul>
               <li><a href="/gallerie">GALLERIE</a></li>
-              <li><a href="#">CONTACT</a></li>
+              <li><a href="/contact">CONTACT</a></li>
               <li><a href="/tarifs">TARIFS</a></li>
           </ul>
           <div class="containericons">
@@ -54,8 +58,10 @@ function Gallerie() {
     </div>
     
    </header>
-   
+   <div class="container-title">
    <h1 id="title1">GALLERIE</h1>
+   </div>
+
    
    <div class="containergallerie">
         <div class="btnContainer">
@@ -64,7 +70,6 @@ function Gallerie() {
             <button class="btn" active={filter === 'grossesse'} onClick={() => setFilter('grossesse')} >grossesse</button>
             <button class="btn" active={filter === 'bébé'} onClick={() => setFilter('bébé')} >bébé</button>
             <button class="btn" active={filter === 'famille'} onClick={() => setFilter('famille')}>famille</button>
-            <button class="btn" active={filter === 'baptême'} onClick={() => setFilter('baptême')}>baptême</button>
             <button class="btn" active={filter === 'couple'} onClick={() => setFilter('couple')}>couple</button>
             <button class="btn" active={filter === 'portrait'} onClick={() => setFilter('portrait')}>portrait</button>
          </div>
@@ -80,7 +85,7 @@ function Gallerie() {
     </div>
 
 
-   </>
+   </div>
 
   )
 };

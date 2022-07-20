@@ -7,7 +7,7 @@ function ContactForm() {
       return <p>Thanks for joining!</p>;
   }
   return (
-    <>
+    <div class="container-form">
       <form onSubmit={handleSubmit}>
         <div class="content-form">
         <label htmlFor="name">Nom et Prénom :</label>
@@ -54,7 +54,7 @@ function ContactForm() {
      </div>
     </form>
 
-    </>
+    </div>
   );
 }
 export default ContactForm;

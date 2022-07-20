@@ -1,9 +1,17 @@
-html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
+body {
+    min-width: 100%;
+    margin: 0 !important; 
+    padding: 0 !important;
     position: absolute;
     background: #1A1A1D;
+}
+
+
+
+
+.main-gallerie {
+    margin: 0 !important; 
+    padding: 0 !important;
 }
 
 header {
@@ -20,9 +28,8 @@ header {
 }
 
 #logo {
+    height: 140px;
     border-radius: 100%;
-    height: 100%;
-    margin-left: 20px;
 }
 
 ul { 
@@ -46,13 +53,14 @@ a {
     align-items: center;
 }
 
+
 .btn {
     background-color: transparent;
     margin: 8px;
     border: none;
     font-family: 'Jost', sans-serif;
     font-weight: bold;
-    font-size: 2vmin;
+    font-size: 20px;
     color: #E32C52;
     cursor: pointer;
     align-items: center;
@@ -63,19 +71,19 @@ a {
     color: white;
 }
 
+
 .btnContainer {
     text-align: start;
     display: block;
-    width: auto;
     margin: 10px;
+    width: auto;
 }
 
 .containergallerie {
     display: flex;
     width: 100%;
     justify-content: center;
-    margin: 0;
-    margin-top: -50px;
+    margin: 0px;
 }
 
 
@@ -85,29 +93,73 @@ a {
 
 .img {
     display: flex;
-    
-   
-  justify-content: center;
-  align-items: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 100%;
+    justify-content: center;
+    height: 100%;
+}
+
+.img img {
+    width: 550px;
+    height: 550px;
+    padding: 0px;
+    margin: 15px;
+}
+
+.container-title {
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 100%;
 }
 
 #title1 {
-
-    margin: 30px;
+    text-align: center;
+    margin: 0px;
     text-decoration: underline;
     text-decoration-color: #DC1818;
-    text-align: center;
-    font-size: 9vmin;
+    font-size: 80px;
     font-family: 'Jost', sans-serif;
     color: white;
-}
 
-.content-gallerie .img {
-    display: block;
-    justify-content: center;
 }
 
 .content-gallerie {
-    position: relative;
-    
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 100%;
+    justify-content: center;
 }
+
+
+@media screen and (max-width: 659px) {
+    .img img {
+        width: 450px;
+        height: 450px;
+    }
+
+    .content-gallerie {
+        justify-content: flex-start;
+    }
+
+    .btn {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .img {
+        justify-content: left;
+    }
+
+
+}
+
+@media screen and (max-width: 670px) {
+    a {
+        font-size: 20px;
+    }
+
+}
+

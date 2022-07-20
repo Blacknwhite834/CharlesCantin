@@ -8,6 +8,7 @@ import Home from './pages/home/home';
 import Gallerie from './pages/gallerie/gallerie';
 import Tarifs from './pages/tarifs/tarifs';
 import Contact from './pages/contact/contact';
+import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
