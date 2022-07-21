@@ -136,16 +136,14 @@ a {
 
 @media screen and (max-width: 659px) {
     .img img {
-        width: 450px;
-        height: 450px;
+        width: 700px;
+        height: 700px;
     }
 
-    .content-gallerie {
-        justify-content: flex-start;
-    }
+    
 
     .btn {
-        font-size: 30px;
+        font-size: 40px;
         margin-bottom: 30px;
     }
 
@@ -158,7 +156,7 @@ a {
 
 @media screen and (max-width: 670px) {
     a {
-        font-size: 20px;
+        font-size: 30px;
     }
 
 }
