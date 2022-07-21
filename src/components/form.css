@@ -51,6 +51,18 @@ input::placeholder {
     font-weight: bold;
     font-size: 20px;
     text-align: center;
+    -webkit-transition: all .5 ease;
+    transition: all .5 ease;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+.content-form button:hover {
+    background: #E32C52;
+    color: black;
+    border: 3px solid aqur-bg;
+    -webkit-transition: all .35s ease;
+    transition: all .35s ease;
 }
 
 .content-form textarea {
@@ -61,7 +73,10 @@ input::placeholder {
     border-radius: 15px;
     border: none;
     font-size: 20px;
+
+    
 }
+
 
 .content-form textarea::placeholder {
     color: rgb(223, 223, 223);
@@ -101,7 +116,7 @@ input::placeholder {
 
     .content-form button {
         font-size: 40px;
+        height: 80px;
     }
 
-    
 }

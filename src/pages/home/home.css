@@ -21,7 +21,7 @@ html, body {
 
 .containertitle {
   width: 100%;
-  line-height: 40px;
+  line-height: 30px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -35,6 +35,7 @@ html, body {
   font-size: 9vmin;
   font-family: 'Jost', sans-serif;
   color: white;
+  font-weight: 900;
   text-decoration: underline;
   text-decoration-color: #DC1818;
 }
@@ -74,10 +75,10 @@ a {
   margin: 60px;
 }
 
+
 a:hover {
   color: #d65555;
 }
-
 
 .containericons {
   display: flex;
