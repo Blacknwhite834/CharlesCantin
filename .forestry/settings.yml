@@ -8,7 +8,7 @@ sections:
   path: ''
   label: Directory Section
   create: all
-  match: "*/*"
+  match: "**/*"
 upload_dir: public/images
 public_path: public/images
 front_matter_path: ''
