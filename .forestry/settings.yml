@@ -6,6 +6,11 @@ webhook_url:
 sections:
 - type: directory
   path: ''
+  label: src
+  create: all
+  match: src/
+- type: directory
+  path: ''
   label: Directory Section
   create: all
   match: "**/*"
