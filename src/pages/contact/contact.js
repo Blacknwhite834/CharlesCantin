@@ -12,7 +12,7 @@ const Contact = () => {
     </Link>
     <div class="navbar">
       <ul>
-          <li><a href="/gallerie">GALLERIE</a></li>
+          <li><a href="/gallerie">GALERIE</a></li>
           <li><a href="#">CONTACT</a></li>
           <li><a href="/tarifs">TARIFS</a></li>
       </ul>

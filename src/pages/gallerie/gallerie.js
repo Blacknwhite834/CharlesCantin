@@ -47,7 +47,7 @@ function Gallerie() {
     </Link>
     <div class="navbar">
           <ul>
-              <li><a href="/gallerie">GALLERIE</a></li>
+              <li><a href="/gallerie">GALERIE</a></li>
               <li><a href="/contact">CONTACT</a></li>
               <li><a href="/tarifs">TARIFS</a></li>
           </ul>
@@ -59,7 +59,7 @@ function Gallerie() {
     
    </header>
    <div class="container-title">
-   <h1 id="title1">GALLERIE</h1>
+   <h1 id="title1">GALERIE</h1>
    </div>
 
    

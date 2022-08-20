@@ -4,16 +4,14 @@ import { NavLink } from 'react-router-dom';
 
 function Home() {
 
-  const imageClick = () => {
-    window.location.href = 'www.google.com';
-  } 
+  
 
 
   return (
     <>
     <div class="homepage">
       <div class="containericons">
-        <img src="./images/iconfacebook.png" onClick={() => imageClick()}/> 
+        <img src="./images/iconfacebook.png"/> 
         <img src="./images/iconinstagram.png"/>
       </div>
       <div class="containertitle">
@@ -22,7 +20,7 @@ function Home() {
       </div>
       <div class="navigationbar">
           <ul>
-              <li><a href="/gallerie">GALLERIE</a></li>
+              <li><a href="/gallerie">GALERIE</a></li>
               <li><a href="/contact">CONTACT</a></li>
               <li><a href="/tarifs">TARIFS</a></li>
           </ul>
